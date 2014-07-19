@@ -8,13 +8,14 @@
 
  ;; Code Style Standard
  '(flycheck-phpcs-standard "WordPress")
- 
+
  ;; Never backup in cureent directory
  '(backup-directory-alist (quote (("." . "~/.backups"))))
- 
- ;; The color of "80 column rule" Guides line 
+
+ ;; The color of "80 column rule" Guides line
  '(fci-rule-color "darkblue")
- 
+ '(fci-rule-column 80)
+
  ;; For file encoding
  '(revert-without-query (quote (".*")))
  '(filename-coding-systems 'utf-8)

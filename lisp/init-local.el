@@ -1,4 +1,7 @@
+;; The color of "80 column rule" Guides line
 (add-hook 'prog-mode-hook 'sanityinc/prog-mode-fci-settings)
+
+;; For file encoding
 (define-key global-map "\C-c\C-l" 'revert-buffer-with-gbk)
 (define-key global-map "\C-c\C-u" 'revert-buffer-with-utf8)
 (define-key global-map "\C-x\C-s" 'save-buffer-with-utf8)
@@ -24,5 +27,9 @@
   "Call `revert-buffer-with-coding-system-no-confirm' with utf8."
   (interactive)
   (revert-buffer-with-coding-system-no-confirm 'utf-8))
+
+;; Add support for some special languages
+(require 'init-sml)
+(require 'init-racket)
 
 (provide 'init-local)
