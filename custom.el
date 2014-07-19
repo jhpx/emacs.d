@@ -18,7 +18,7 @@
 
  ;; For file encoding
  '(revert-without-query (quote (".*")))
- '(filename-coding-systems 'utf-8)
+ '(file-name-coding-system 'utf-8)
  '(coding-system-for-write 'utf-8)
 
  ; For tab and space
