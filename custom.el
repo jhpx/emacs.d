@@ -14,6 +14,7 @@
 
  ;; The color of "80 column rule" Guides line
  '(fci-rule-color "darkblue")
+ '(fci-rule-column 80)
 
  ;; For file encoding
  '(revert-without-query (quote (".*")))

@@ -30,5 +30,6 @@
 
 ;; Add support for some special languages
 (require 'init-sml)
+(require 'init-racket)
 
 (provide 'init-local)
