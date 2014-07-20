@@ -4,7 +4,7 @@
 ;; "Dejavu Sans Mono 10" .vs. "Microsoft Yahei 12"
 ;; "Consolas 11" .vs. "Microsoft Yahei 16"
 ;; "Liberation Mono 12" .vs. "WenQuanYi Micro Hei Mono 15"
-(set-default-font "Dejavu Sans Mono 10")
-(set-fontset-font "fontset-default" 'unicode "Microsoft Yahei 12")
+(set-default-font "Dejavu Sans Mono 12")
+(set-fontset-font "fontset-default" 'unicode "Microsoft Yahei 15")
 
 (provide 'init-cjkfonts)
