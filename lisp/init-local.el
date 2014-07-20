@@ -31,6 +31,8 @@
 ;; Add support for some special languages
 (require 'init-sml)
 (require 'init-racket)
+
+;; Add some miscs
 (require 'init-cjkfonts)
 
 (provide 'init-local)
