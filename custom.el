@@ -24,6 +24,9 @@
  ; For tab and space
  '(x-stretch-cursor t)
  '(show-trailing-whitespace t)
+
+ ; For javascript
+ '(inferior-js-program-command "node -e require('repl').start({ignoreUndefined:true})")
  )
 
 
