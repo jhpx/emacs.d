@@ -9,4 +9,4 @@ These tools are *OPTIONAL*. Your Emacs will NOT crash if they are not installed.
 ## node (node.js)
 - command: "node -e require('repl').start({ignoreUndefined:true})"
 - needed by `js-comint' package
-- configured in `init-javascript.el'
+- configured in `init-javascript.el' and "custom.el"
