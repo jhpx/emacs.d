@@ -14,7 +14,8 @@
 ;;----------------------------------------------------------------------------
 ;; For file processing
 ;;----------------------------------------------------------------------------
-(define-key global-map "\C-c\C-c" 'kill-all-buffers-with-suspend)
+(define-key global-map "\C-x\C-c" 'kill-all-buffers-then-suspend)
+(define-key global-map "\C-c\C-c" 'save-buffers-kill-terminal)
 (define-key global-map "\C-xK" 'kill-all-buffers)
 
 (defun kill-all-buffers ()
