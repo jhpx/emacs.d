@@ -3,33 +3,6 @@
 (add-hook 'prog-mode-hook 'sanityinc/prog-mode-fci-settings)
 
 ;;----------------------------------------------------------------------------
-;; Use Http proxy
-;;----------------------------------------------------------------------------
-(defconst proxy-server-string "127.0.0.1:8118")
-(setq url-proxy-services
- `(("http" . ,proxy-server-string)
- ("https" . ,proxy-server-string)))
-
-
-;;----------------------------------------------------------------------------
-;; For file processing
-;;----------------------------------------------------------------------------
-(define-key global-map "\C-x\C-c" 'kill-all-buffers-with-suspend)
-(define-key global-map "\C-xK" 'kill-all-buffers)
-
-(defun kill-all-buffers ()
-  "Kill all buffers and windows."
-  (interactive)
-  (mapcar 'kill-buffer (buffer-list))
-  (delete-other-windows))
-
-(defun kill-all-buffers-then-suspend ()
-  "Kill all buffers and windows then suspend."
-  (interactive)
-  (kill-all-buffers)
-  (sanityinc/maybe-suspend-frame))
-
-;;----------------------------------------------------------------------------
 ;; For file encoding
 ;;----------------------------------------------------------------------------
 (define-key global-map "\C-c\C-l" 'revert-buffer-with-gbk)
@@ -64,9 +37,10 @@
 (require 'init-sml)
 (require 'init-racket)
 (require 'init-bison)
+
 ;;----------------------------------------------------------------------------
-;; Add some miscs
-;;----------------------------------------------------------------------------
-(require 'init-cjkfonts)
+;; Add some Operating System Miscs
+;;----------------------------------------------------------------------------(w
+(require 'init-local-win)
 
 (provide 'init-local)
