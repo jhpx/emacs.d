@@ -1,6 +1,12 @@
 ;; The color of "80 column rule" Guides line
 (add-hook 'prog-mode-hook 'sanityinc/prog-mode-fci-settings)
 
+;; Use Http proxy
+(defconst proxy-server-string "127.0.0.1:8118")
+(setq url-proxy-services
+ `(("http" . ,proxy-server-string)
+ ("https" . ,proxy-server-string)))
+
 ;; For file encoding
 (define-key global-map "\C-c\C-l" 'revert-buffer-with-gbk)
 (define-key global-map "\C-c\C-u" 'revert-buffer-with-utf8)
