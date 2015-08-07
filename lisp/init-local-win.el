@@ -30,6 +30,8 @@
   (kill-all-buffers)
   (sanityinc/maybe-suspend-frame))
 
+(remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
+
 ;;----------------------------------------------------------------------------
 ;; Fonts:
 ;; English Fonts must be 1/2 width of Chinese Fonts
