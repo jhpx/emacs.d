@@ -40,6 +40,8 @@
 (define-key global-map "\C-cu" 'table-unrecognize)
 (define-key global-map "\C-ci" 'table-insert)
 
+;;----------------------------------------------------------------------------
+(require 'init-aes)
 
 ;;----------------------------------------------------------------------------
 ;; Add support for some special languages
