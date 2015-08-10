@@ -1,3 +1,5 @@
 (require-package 'aes)
-
+(require 'aes)
+(aes-enable-auto-decryption)
+(setq 'aes-always-ask-for-passwords nil)
 (provide 'init-aes)
