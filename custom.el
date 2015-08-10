@@ -6,29 +6,7 @@
  '(custom-safe-themes
    (quote
     ("4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default)))
- '(session-use-package t nil (session))
-
- ;; Code Style Standard
- ;'(flycheck-phpcs-standard "WordPress")
-
- ;; Never backup in cureent directory
- '(backup-directory-alist (quote (("." . "~/.backups"))))
-
- ;; The color of "80 column rule" Guides line
- '(fci-rule-color "darkblue")
- '(fci-rule-column 80)
-
- ;; For file encoding
- '(revert-without-query (quote (".*")))
- '(coding-system-for-write 'utf-8)
-
- ; For tab and space
- '(x-stretch-cursor t)
- '(show-trailing-whitespace t)
-
- ; For javascript
- '(inferior-js-program-command "node -e require('repl').start({ignoreUndefined:true})")
- )
+ '(session-use-package t nil (session)))
 
 
 (custom-set-faces

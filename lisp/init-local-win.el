@@ -6,10 +6,10 @@
 ;;----------------------------------------------------------------------------
 ;; Use Http proxy
 ;;----------------------------------------------------------------------------
-;;(defconst proxy-server-string "127.0.0.1:8118")
-;;(setq url-proxy-services
-;; `(("http" . ,proxy-server-string)
-;; ("https" . ,proxy-server-string)))
+(defconst proxy-server-string "127.0.0.1:8118")
+(setq url-proxy-services
+ `(("http" . ,proxy-server-string)
+ ("https" . ,proxy-server-string)))
 
 ;;----------------------------------------------------------------------------
 ;; For file processing

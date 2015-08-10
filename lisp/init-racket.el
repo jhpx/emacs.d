@@ -6,10 +6,6 @@
 (autoload 'run-scheme "quack" "Quack scheme editing mode" t)
 (autoload 'scheme-mode "quack" "Quack scheme editing mode" t)
 
-(setq auto-mode-alist
-    (append '(
-        ("\\.rkt$" . scheme-mode)
-    )
-    auto-mode-alist))
+(add-to-list 'auto-mode-alist '("\\.rkt$" . scheme-mode))
 
 (provide 'init-racket)

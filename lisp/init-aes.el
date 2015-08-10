@@ -1,3 +1,3 @@
-(require 'aes)
-(aes-enable-auto-decryption)
+(require-package 'aes)
+
 (provide 'init-aes)

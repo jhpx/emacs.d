@@ -1,11 +1,32 @@
 ;;----------------------------------------------------------------------------
+;; Some basic local preference
+;;----------------------------------------------------------------------------
+ ;; Code Style Standard
+(setq flycheck-phpcs-standard "WordPress")
+
+ ;; Never backup in cureent directory
+(setq backup-directory-alist (quote (("." . "~/.backups"))))
+
+ ; For tab and space
+(setq x-stretch-cursor t)
+(setq show-trailing-whitespace t)
+
+ ; For javascript
+(setq inferior-js-program-command "node -e require('repl').start({ignoreUndefined:true})")
+
+;;----------------------------------------------------------------------------
 ;; The color of "80 column rule" Guides line
 ;;----------------------------------------------------------------------------
+(setq fci-rule-color "darkblue")
+(setq fci-rule-column 80)
 (add-hook 'prog-mode-hook 'sanityinc/prog-mode-fci-settings)
 
 ;;----------------------------------------------------------------------------
 ;; For file encoding
 ;;----------------------------------------------------------------------------
+(setq revert-without-query (quote (".*")))
+(setq coding-system-for-write 'utf-8)
+
 (define-key global-map "\C-c\C-l" 'revert-buffer-with-gbk)
 (define-key global-map "\C-c\C-u" 'revert-buffer-with-utf8)
 (define-key global-map "\C-x\C-s" 'save-buffer-with-utf8)
@@ -49,6 +70,7 @@
 (require 'init-sml)
 (require 'init-racket)
 (require 'init-bison)
+(require 'init-yaml)
 
 ;;----------------------------------------------------------------------------
 ;; Add some Operating System Miscs
