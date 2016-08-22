@@ -4,12 +4,30 @@
 ;;;;--------------------------------------------------------------------------
 
 ;;----------------------------------------------------------------------------
+;; Gnutls on windows
+;;----------------------------------------------------------------------------
+(setq tls-checktrust t)
+(setq gnutls-log-level 50)
+(let ((trustfile
+       (replace-regexp-in-string
+        "\\\\" "/"
+        (replace-regexp-in-string
+         "\n" ""
+         (shell-command-to-string "python -m certifi")))))
+  (setq tls-program
+        (list
+         (format "gnutls-cli%s --x509cafile %s -p %%p %%h"
+                 (if (eq window-system 'w32) ".exe" "") trustfile)))
+  (setq gnutls-verify-error t)
+  (setq gnutls-trustfiles (list trustfile)))
+
+;;----------------------------------------------------------------------------
 ;; Use Http proxy
 ;;----------------------------------------------------------------------------
-(defconst proxy-server-string "127.0.0.1:8118")
-(setq url-proxy-services
- `(("http" . ,proxy-server-string)
- ("https" . ,proxy-server-string)))
+;(defconst proxy-server-string "127.0.0.1:8118")
+;(setq url-proxy-services
+; `(("http" . ,proxy-server-string)
+; ("https" . ,proxy-server-string)))
 
 ;;----------------------------------------------------------------------------
 ;; For file processing

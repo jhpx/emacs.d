@@ -72,9 +72,5 @@
 (require 'init-bison)
 (require 'init-yaml)
 
-;;----------------------------------------------------------------------------
-;; Add some Operating System Miscs
-;;----------------------------------------------------------------------------
-(require 'init-local-win)
 
 (provide 'init-local)
